@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CGPA Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+        <div class="menu">
+            <button onclick="showSection('marksRequired')">Marks Required for Passing</button>
+            <button onclick="showSection('passFail')">Check Pass or Fail</button>
+            <button onclick="showSection('cgpaCalculation')">Calculate CGPA</button>
+        </div>
+
+        <div id="marksRequired" class="section">
+            <h2>Marks Required for Passing</h2>
+            <input type="text" id="subjectName1" placeholder="Subject Name">
+            <input type="number" id="T1" placeholder="T1 Marks">
+            <input type="number" id="T2" placeholder="T2 Marks">
+            <button onclick="calculateMarksRequired()">Calculate</button>
+            <p id="marksRequiredResult"></p>
+        </div>
+
+        <div id="passFail" class="section">
+            <h2>Check Pass or Fail</h2>
+            <input type="text" id="subjectName2" placeholder="Subject Name">
+            <input type="number" id="T1Pass" placeholder="T1 Marks">
+            <input type="number" id="T2Pass" placeholder="T2 Marks">
+            <input type="number" id="ESE" placeholder="ESE Marks">
+            <button onclick="checkPassFail()">Check</button>
+            <p id="passFailResult"></p>
+        </div>
+
+        <div id="cgpaCalculation" class="section">
+            <h2>Calculate CGPA</h2>
+            <input type="number" id="grade" placeholder="Grade (GPA)">
+            <input type="number" id="credit" placeholder="Credit Hours">
+            <button onclick="calculateCGPA()">Add</button>
+            <button onclick="finalCGPA()">Calculate Final CGPA</button>
+            <p id="cgpaResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
